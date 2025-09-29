@@ -1,4 +1,4 @@
-package ACTIVIDADES;
+package Actividades_ud1;
 
 public class Actividad5 {
 

@@ -1,4 +1,4 @@
-package ACTIVIDADES;
+package Actividades_ud1;
 //aqui importamos el lector
 import java.util.Scanner;
 public class Actividad14 {
