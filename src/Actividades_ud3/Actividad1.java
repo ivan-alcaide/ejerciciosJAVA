@@ -18,7 +18,7 @@ public class Actividad1 {
 			num=sc.nextInt();
 			par=(num%2)==0;
 			positivo=num>0;
-			cuadrado=num+num;
+			cuadrado=num*num;
 			
 			System.out.println("¿Es positivo?" + positivo);
 			System.out.println("¿Es par?" + par);
