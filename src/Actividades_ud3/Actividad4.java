@@ -15,7 +15,7 @@ public class Actividad4 {
 		System.out.println("Hasta que numero quieres contar: ");
 		n=sc.nextInt();
 		
-		while(uno!=n) {
+		while(uno!=n && n>0) {
 			uno++;
 			System.out.println(uno);
 		}
