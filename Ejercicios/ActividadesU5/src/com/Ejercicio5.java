@@ -1,5 +1,6 @@
 package com;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,6 +17,7 @@ public class Ejercicio5 {
       public static void main(String [] args) {
             Scanner sc = new Scanner(System.in);                                                                                                                                                                                                                                                                                                                                        
             int n = -1;
+            int [] tablaUsuario;
            do {
               System.out.println("Dime un número entre 1 y 5");
               n = sc.nextInt();
@@ -23,8 +25,20 @@ public class Ejercicio5 {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
          int[] tabla = crearTablaVacia(n);
         tabla=  rellenarTablaConNumeroAleatorio(tabla);
-        Utiles.mostrarTabla(tabla);
+        System.out.println(Arrays.toString(tabla));
+       // Utiles.mostrarTabla(tabla);
+        
+        tablaUsuario = tablaUsuario(tabla, sc);
+        
+        
+        
       }                                                                                                                                                                                                                                                                                                                                        
+ private static int[] tablaUsuario(int[] tabla, Scanner sc) {
+		for(int i=0; i < tabla.length; i++) {
+			tabla[i] = sc.nextInt();
+		}
+		return null;
+	}
  /**
   *                                                                                                                                                                                                                                                                                                                                              
   * @param n
