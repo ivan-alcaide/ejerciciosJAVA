@@ -48,7 +48,7 @@ public class Actividad4 {
     }
     
     
-    // Método que intercambia el elemento en 'pos' con el último y devuelve una copia reducida
+    //Método que intercambia el elemento en 'pos' con el último y devuelve una copia reducida
     public static int[] borrarElemento(int[] t, int pos) {
         int temp = t[pos];
         t[pos] = t[t.length - 1];
