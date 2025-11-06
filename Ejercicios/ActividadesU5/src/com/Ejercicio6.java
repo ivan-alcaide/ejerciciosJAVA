@@ -2,9 +2,26 @@ package com;
 
 import java.util.Arrays;
 import java.util.Scanner;
+/**
+ * Diseñar una aplicación que lea las puntuaciones (enteros) 
+ * de 5 programadores y las muestre ordenadas. 
+ * Después pueden añadirse hasta 3 programadores de exhibición; 
+ * 
+ * su puntuación se introduce igual, usando -1
+ *  para indicar que no hay más. 
+ *  
+ *  
+ *  Mostrar finalmente todos los puntos ordenados.
 
+ */
 public class Ejercicio6 {
 	public static void main(String [] args) {
+		// temp para dato temporal que permita leer número del usuario
+		// contador para que termine controlar cuando salir del bucle
+		int tempPuntuacion, contador = 0;
+		// la posición nueva para la puntuación
+		int posicionExtra;
+		
 		//Guardar en una tabla 5 números dados por el Usuario
 		int[] puntos = new int[5];
 		Scanner sc = new Scanner(System.in);
@@ -19,11 +36,24 @@ public class Ejercicio6 {
 		Arrays.sort(puntos);
 		System.out.println(Arrays.toString(puntos));
 	
-		int [] numeros = {3, 1, 4, 5, 10, 15};
+		//int posicion = Arrays.binarySearch(numeros, 10);
 		
-		int posicion = Arrays.binarySearch(numeros, 10);
-		System.out.println("Posición: "+ posicion);
-		
-		
+		do {
+			System.out.println("Introduce una puntuación: ");
+			tempPuntuacion = sc.nextInt();
+			
+			if(tempPuntuacion == -1) {
+				break;
+			}
+			
+			puntos=Arrays.copyOf(puntos, puntos.length+1);
+			posicionExtra = puntos.length -1 ;
+			
+			puntos[posicionExtra] = tempPuntuacion;
+			contador++;
+		}while(contador < 3);
+		//Ordenamos
+		Arrays.sort(puntos);
+		System.out.println(Arrays.toString(puntos));
 	}
 }
