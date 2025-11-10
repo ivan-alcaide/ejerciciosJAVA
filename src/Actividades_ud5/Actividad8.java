@@ -5,60 +5,40 @@ import java.util.Scanner;
 
 public class Actividad8 {
 
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-
-		int[] tabla=new int[0];
+	public static void main(String [] args) {
+		int [] tabla =  {1,3,5,5, 7,9,9,9,5};
+		
 		
 		System.out.println(Arrays.toString(sinRepetidos(tabla)));
+	
+	}
+	
+	public static int[] sinRepetidos(int t[]) {
 		
+		int [] res = Arrays.copyOf(t, 1);
+		for(int i=0; i<t.length; i++) {
+			if(!contiene(res, t[i])){
+				res = insertar( res, t[i]);
+			}
+		}
+		return res;
+	}
+	
+	public static int[] insertar(int [] tabla, int valor) {
+		int[] nuevaTabla = Arrays.copyOf(tabla, tabla.length+1);
+		nuevaTabla[nuevaTabla.length-1] = valor;
+		return nuevaTabla;
+	}
+	
+	public static boolean contiene(int [] tabla, int valor) {
+		boolean ret = false;
+		for(int i = 0; i< tabla.length; i++) {
+			if(tabla[i]==valor) {
+				return true;
+			}
+		}
+		return ret;
 	}
 	
 	
-	public static int[] sinRepetidos(int tabla[]) {
-		Scanner sc=new Scanner(System.in);
-
-		
-		int temp, posicion, orig, sumj=1;
-		
-		
-		System.out.println("A continuacion podra añadir numeros a una tabla, cuando quiera parar escriba -1");
-		do {
-		System.out.println("Introduzca un numero para añadir a la tabla");
-		temp=sc.nextInt();
-		if(temp==-1) {
-			break;
-		}
-		tabla=Arrays.copyOf(tabla, tabla.length+1);
-		posicion=tabla.length-1;
-		tabla[posicion]=temp;
-		
-	
-			
-		}while(temp!=-1);
-		
-		for(int i=0;i<tabla.length;i++) {
-			
-			
-			for(int j=sumj;j<tabla.length;j++){
-				
-				if(tabla[i]==tabla[j]) {
-					orig=tabla[tabla.length-1];
-					tabla[tabla.length-1]=tabla[j];
-					tabla[j]=orig;
-					tabla=Arrays.copyOf(tabla, tabla.length - 1);
-					
-				}
-				
-			}
-			sumj++;
-		}
-		System.out.println("La tabla sin numeros repetidos es: \n");
-		return tabla;
-			
-		
-		
-		
-	
-		}
-		}
+}
