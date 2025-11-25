@@ -34,8 +34,18 @@ public class Actividad12 {
 				}
 			}
 			
+		int contador2=0;
+			for(int i =0;i<p1.length();i++) {
+				for(int j=0;j<p2.length();j++) {
+					if(p1.charAt(i)==p1.charAt(j)) {
+						contador2++;
+					}
+					
+				}
+			}		
+			
 			//comprobar que el contador  sea igual a la cantidad de carácteres de las palabras e imprimir resultado en cada caso
-			if(contador==p1.length()) {
+			if(contador==contador2) {
 				System.out.println("Son anagramas");
 			}else {
 				System.out.println("No son anagramas");
