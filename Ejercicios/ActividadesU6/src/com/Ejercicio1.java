@@ -19,6 +19,7 @@ public class Ejercicio1 {
 		System.out.println("Dime otra palabra: ");
 		palabra2 = sc.nextLine();
 		
+		
 		if(palabra1.length() > palabra2.length()) {
 			System.out.println("La segunda palabra es más corta ");
 		}else if(palabra2.length() == palabra1.length() ){
