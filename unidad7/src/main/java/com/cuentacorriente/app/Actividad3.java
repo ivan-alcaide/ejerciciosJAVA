@@ -1,16 +1,13 @@
-package cuentacorriente;
+package com.cuentacorriente.app;
 
 import java.util.Scanner;
 
-public class main {
+public class Actividad3 {
 	
 	public static void main(String[] args) throws Exception {
 		
 		Scanner sc=new Scanner(System.in);
-		String nombre="";
-		String dni="";
-		
-		
+	
 		
 		cuentaCorriente cc1=new cuentaCorriente("Iván","1111111A");
 		cuentaCorriente cc2=new cuentaCorriente(3.52);

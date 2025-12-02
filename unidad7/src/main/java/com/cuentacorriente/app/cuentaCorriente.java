@@ -1,12 +1,17 @@
-package cuentacorriente;
-
+package com.cuentacorriente.app;
+import java.util.Scanner;
 public class cuentaCorriente {
 	//atributos
 	private double saldo;
 	private double limiteDescubierto;
-	private String nombre;
-	private String dni;
+	public String nombre;
+	protected String dni;
+	static String banco;
 	
+	
+	
+
+
 	public cuentaCorriente(String nombre, String dni) {
 		this.nombre=nombre;
 		this.dni=dni;
@@ -62,4 +67,52 @@ public class cuentaCorriente {
 		return "DNI : " + this.dni +"\nNombre : "+ this.nombre + "\nSaldo : " + this.saldo + "\nLimite posible al descubierto : " + this.limiteDescubierto;
 	}
 	
+	public double getSaldo() {
+		return saldo;
+	}
+
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+
+	public double getLimiteDescubierto() {
+		return limiteDescubierto;
+	}
+
+
+	public void setLimiteDescubierto(double limiteDescubierto) {
+		this.limiteDescubierto = limiteDescubierto;
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	public String getDni() {
+		return dni;
+	}
+
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+
+	public static String getBanco() {
+		return banco;
+	}
+
+
+	public static void setBanco(String banco) {
+		cuentaCorriente.banco = banco;
+	}
 }
