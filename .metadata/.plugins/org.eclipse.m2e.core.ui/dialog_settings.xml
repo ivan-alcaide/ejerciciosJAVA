@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/usuario/Documents/git-proyectos/ejerciciosJAVA"/>
 			<item value="/home/usuario/Documents/git-proyectos/ejerciciosJAVA/dni"/>
 			<item value="/home/usuario/Documents/git-proyectos/ejerciciosJAVA/unidad7"/>
 			<item value="/home/usuario/Documents/git-proyectos/ejerciciosJAVA/Actividades_ud7/src"/>
