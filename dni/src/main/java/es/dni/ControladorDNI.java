@@ -38,25 +38,18 @@ public class ControladorDNI {
 		return numero+letra;
 	}
 	
-	public boolean esValido(String dniCompleto) throws Exception{
-		
-		if(dniCompleto==null) {
-			return false;
-		}
-		if(dniCompleto.length()!=Long_DNI) {
-			throw new Exception("La longitud no es cortrecta");
-		}
-		
-		char letra = dniCompleto.charAt(8);
-		String num_dni=dniCompleto.substring(0,8);
-		
-		if(letra!=calcularLetra(num_dni)) {
-			return false;
-		}else {
-			return true;
-		}
-		
-	}
+	 public boolean esValido(String dniCompleto) {
+	        if (dniCompleto == null || dniCompleto.length() != Long_DNI) {
+	            return false;
+	        }
+	        try {
+	            String numero = dniCompleto.substring(0, Long_numDNI);
+	            char letraProporcionada = Character.toUpperCase(dniCompleto.charAt(Long_numDNI));
+	            return letraProporcionada == calcularLetra(numero);
+	        } catch (IllegalArgumentException e) {
+	            return false;
+	        }
+	    }
 
 	public char[] getLetras() {
 		return Letras;
