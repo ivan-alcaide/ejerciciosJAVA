@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+/home/usuario/Documents/git-proyectos/ejerciciosJAVA/.metadata/.plugins/org.eclipse.jdt.core
+1175494123.index
+2298624012.index
+3949366491.index
+1865797976.index
+2404501401.index
+428204518.index

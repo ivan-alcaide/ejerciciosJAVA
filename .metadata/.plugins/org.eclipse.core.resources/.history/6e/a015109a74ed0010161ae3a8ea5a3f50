@@ -1,0 +1,67 @@
+package es.dni;
+
+import java.util.Random;
+
+public class ControladorDNI {
+	
+	private final char[] Letras = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
+	private final int Division = 23;
+	private final int Long_numDNI= 8;
+	private final int Long_DNI=9;
+	
+	
+	private char calcularLetra(String numero_dni) {
+		
+		if(numero_dni==null) {
+			throw new IllegalArgumentException("El número introducido no puede ser nulo");
+		}
+		if (numero_dni.length()!=Long_numDNI ) {
+			throw new IllegalArgumentException("El número introducido no tiene la longitud esperada");
+		}
+		int num_dni,num_letra;
+		char letra=' ';
+
+		num_dni = Integer.parseInt(numero_dni);
+		num_letra=num_dni%Division;
+		return Letras[num_letra];
+		
+		
+	}
+	
+	public String generarAleatorioDNI() {
+		Random random=new Random();
+		int num=random.nextInt(100_000_000);
+		String numero=String.format("%08d",num);
+		System.out.println(numero);
+		char letra=calcularLetra(numero);
+		
+		return numero+letra;
+	}
+	
+	public boolean esValido(String dniCompleto) throws Exception{
+		
+		if(dniCompleto==null) {
+			return false;
+		}
+		else if(dniCompleto.length()!=Long_DNI) {
+			throw new Exception("La longitud no es cortrecta");
+			return false;
+		}
+		
+		char letra = dniCompleto.charAt(8);
+		String num_dni=dniCompleto.substring(0,8);
+		
+		if(letra!=calcularLetra(num_dni)) {
+			return false;
+		}else {
+			return true;
+		}
+		
+	}
+
+	public char[] getLetras() {
+		return Letras;
+	}
+
+
+}
