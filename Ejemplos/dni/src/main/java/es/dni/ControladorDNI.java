@@ -1,4 +1,8 @@
 package es.dni;
+
+import java.util.Random;
+import org.junit.jupiter.api.DisplayName;
+
 public class ControladorDNI {
 
     private static final char[] LETRAS = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
@@ -6,6 +10,12 @@ public class ControladorDNI {
     private static final int LONGITUD_NUMERO_DNI = 8;
     private static final int LONGITUD_DNI_COMPLETO = 9;
 
+    /**
+     * Constructor
+     */
+    public ControladorDNI() {
+    	//System.out.println("Creado objeto ControladorDNI");
+    }
     /**
      * Calcula la letra correspondiente a un número de DNI.
      * 
@@ -47,7 +57,7 @@ public class ControladorDNI {
      * @return Un DNI válido en formato de cadena.
      */
     public String generarAleatorioDNI() {
-        int numeroAleatorio = (int) (Math.random() * 100000000);
+        int numeroAleatorio = (int) (new Random()).nextInt(100_000_000);
         String numeroDni = String.format("%08d", numeroAleatorio);
         char letra = calcularLetra(numeroDni);
         return numeroDni + letra;
