@@ -6,12 +6,16 @@ public class cuentaCorriente {
 	private double limiteDescubierto;
 	public String nombre;
 	protected String dni;
-	static String banco;
+	public static String nbanco = "Banco Camas";
 	
-	
+	banco banco;
 	
 
 
+	//METODOS
+	
+	//constructores
+	
 	public cuentaCorriente(String nombre, String dni) {
 		this.nombre=nombre;
 		this.dni=dni;
@@ -36,9 +40,17 @@ public class cuentaCorriente {
 		//para que al mostrar info no ponga null
 		this.nombre="Iván";
 	}
+	public cuentaCorriente(String nombre, String dni,banco banco) {
+		this.nombre=nombre;
+		this.dni=dni;
+		this.saldo=0;
+		this.limiteDescubierto=-50;
+		this.banco=banco;
+		
+	}
 
-
-
+	//acciones
+	
 	public boolean sacarDinero(double cantidad) throws Exception {
 		this.saldo=saldo;
 		this.limiteDescubierto=limiteDescubierto;
@@ -64,8 +76,24 @@ public class cuentaCorriente {
 	}
 		
 	public String mostrarInformacion() {
-		return "DNI : " + this.dni +"\nNombre : "+ this.nombre + "\nSaldo : " + this.saldo + "\nLimite posible al descubierto : " + this.limiteDescubierto;
+		return "DNI : " + this.dni +"\nNombre : "+ this.nombre + "\nSaldo : " + this.saldo + "\nLimite posible al descubierto : " + this.limiteDescubierto ;
 	}
+	
+	public void asignarBanco(banco banco) {
+		this.banco=banco;
+	}
+	
+	public void mostrarInfobanco() {
+		System.out.println("Nombre del banco : " + this.banco.getNombre());
+		System.out.println("Capital : " + this.banco.getCapital());
+		System.out.println("Dirección central : " + this.banco.getDireccionCentral());
+	}
+	
+	public void eliminarBanco() {
+		this.banco=null;
+	}
+	
+	//getters y setters
 	
 	public double getSaldo() {
 		return saldo;
@@ -85,8 +113,7 @@ public class cuentaCorriente {
 	public void setLimiteDescubierto(double limiteDescubierto) {
 		this.limiteDescubierto = limiteDescubierto;
 	}
-
-
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -106,13 +133,19 @@ public class cuentaCorriente {
 		this.dni = dni;
 	}
 
+	public static String getNbanco() {
+		return nbanco;
+	}
+	
+	
 
-	public static String getBanco() {
+	public static void setNbanco(String nbanco) {
+		cuentaCorriente.nbanco = nbanco;
+	}
+
+
+	public banco getBanco() {
 		return banco;
 	}
 
-
-	public static void setBanco(String banco) {
-		cuentaCorriente.banco = banco;
-	}
 }
