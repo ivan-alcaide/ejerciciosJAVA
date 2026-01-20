@@ -23,7 +23,7 @@ class TextoTest {
     // -------------------------
     // CONSTRUCTORES
     // -------------------------
-
+  
     @Test
     @DisplayName("Constructor(maxLongitud): crea texto vacío con longitud 0 y max configurado")
     void constructorSoloMax_creaTextoVacio() {
@@ -99,12 +99,12 @@ class TextoTest {
         String mensaje = ex.getMessage();
         assertEquals(mensajeEsperado, mensaje, "Mensaje de error incorrecto para maxLongitud inválido");
     }
-
+    
     // -------------------------
     // AÑADIR CARACTERES (final)
     // -------------------------
 
-    /**  @Test
+      @Test
     @DisplayName("anadirFinal(char): añade al final si hay espacio y devuelve true")
     void anadirFinal_char_conEspacio_devuelveTrue() {
         boolean resultadoEsperado = true;
@@ -355,6 +355,6 @@ class TextoTest {
         Texto t = new Texto("Hola", 10);
         assertEquals("Hola", t.toString(), "toString() debería devolver el contenido");
     }
-    */
+    
 
 }
