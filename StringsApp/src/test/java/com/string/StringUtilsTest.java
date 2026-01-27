@@ -185,7 +185,7 @@ class StringUtilsTest {
         String resultado3 = stringUtils.invertir("");
         assertEquals(resultadoEsperado3, resultado3, "Invertir vacío debe devolver vacío");
     }
-/*
+
     // -------------------------
     // 8) CONTAR PALABRA EN FRASE
     // -------------------------
@@ -275,7 +275,7 @@ class StringUtilsTest {
         String resultado3 = stringUtils.traducirJavalandia("Esto no es javalandia");
         assertEquals(resultadoEsperado3, resultado3, "Si no es del idioma, debe devolver null");
     }
-
+/*
     // -------------------------
     // 11) CODIFICA CARÁCTER
     // -------------------------

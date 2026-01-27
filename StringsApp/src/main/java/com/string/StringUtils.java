@@ -94,6 +94,56 @@ public class StringUtils {
 		}
 		
 		
+		return resultado;
+	}
+
+	public int contarPalabra(String frase, String palabra) {
+	    if (frase == null || palabra == null || palabra.isEmpty()) {
+	        return 0;
+	    }
+
+	    String fraseLower = frase.toLowerCase();
+	    String palabraLower = palabra.toLowerCase();
+
+	    int contador = 0;
+	    int indice = 0;
+
+	    while ((indice = fraseLower.indexOf(palabraLower, indice)) != -1) {
+	        contador++;
+	        indice += palabraLower.length(); 
+	    }
+
+	    return contador;
+	}
+	
+	public boolean esPalindroma(String texto) {
+	    if (texto == null) {
+	    	return false;
+	    }
+
+	    String limpio = texto.toLowerCase().replace(" ", "");
+
+	    int i = 0;
+	    int j = limpio.length() - 1;
+
+	    while (i < j) {
+	        if (limpio.charAt(i) != limpio.charAt(j)) {
+	            return false;
+	        }
+	        i++;
+	        j--;
+	    }
+
+	    return true;
+	}
+
+	public String traducirJavalandia(String string) {
+		String javalin1="Javalín, javalón";
+		String javalin2="javalén, len, len";
 		return null;
 	}
+	
+	
+
+
 }
