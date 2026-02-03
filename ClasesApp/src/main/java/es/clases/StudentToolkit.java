@@ -128,8 +128,8 @@ public class StudentToolkit {
 		
 		for(int i=0;i<is.length;i++) {
 			int rep=is[i];
-			for(int j=0;j<sin.length;j++) {
-				if(rep==sin[j]) {
+			for(int j=0;j<is.length;j++) {
+				if(rep==is[j]) {
 					
 				}
 			}
