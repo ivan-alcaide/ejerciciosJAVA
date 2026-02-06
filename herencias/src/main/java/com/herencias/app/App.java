@@ -32,5 +32,8 @@ public class App
     	hE.inc();
     	
     	System.out.println(hE.toString());
+    	
+    	System.out.println(hE.iguales(00, 10, 00));
+    	
     }
 }
