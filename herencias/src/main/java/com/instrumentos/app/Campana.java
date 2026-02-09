@@ -1,9 +1,7 @@
 package com.instrumentos.app;
 
-public class Piano extends Instrumento{
+public class Campana extends Instrumento{
 
-	
-	
 
 
 	@Override
@@ -12,12 +10,12 @@ public class Piano extends Instrumento{
 			if (super.melodia[i]==null) {
 				
 			}else {
-				System.out.print(super.melodia[i]+"  ");
+				System.out.print(super.melodia[i]+"      ");
 			}
+			
 		}
 		
 	}
 	
-
 	
 }
