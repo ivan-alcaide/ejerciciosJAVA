@@ -97,6 +97,8 @@ public class Conjunto extends ConjuntoArray{
 			throw new NullPointerException("Ningun conjunto puede ser null");
 		}
 		
+		c1.añadirElementosDe(c2);
+		return c1;
 		
 	}
 	
