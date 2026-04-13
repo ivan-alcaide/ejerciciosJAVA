@@ -1,0 +1,15 @@
+Piedra
+Cabeza
+Tentaculo
+Suelo
+Pared
+Tierra
+Chavales
+Sesenta
+Siete
+Tierra
+Suelo
+Patata
+Piedra
+Tentaculo
+Suelo
