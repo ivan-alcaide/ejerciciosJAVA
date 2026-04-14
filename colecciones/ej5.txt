@@ -1,12 +1,12 @@
 Piedra
 Cabeza
 Tentaculo
-Suelo
+Suelo. Suelo
 Pared
 Tierra
 Chavales
 Sesenta
-Siete
+Siete, caracol
 Tierra
 Suelo
 Patata
